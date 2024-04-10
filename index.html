@@ -110,20 +110,20 @@
             let phone = document.getElementById("user_phone").value;
             if(name.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в имени';
-                    return;
+                return;
             }
             if(email.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в email';
-                    return;
+                return;
             }
             if(phone.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в номере телефона';
-                    return;
+                return;
             }
             let data = {
                 name: name,
                 email: email,
-                phone: phone,
+                phone: phone
             }
             tg.sendData(JSON.stringify(data));
             tg.close();
